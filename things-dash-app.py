@@ -2,27 +2,34 @@
 Things Database Connector
 """
 #%% Import packages
+
+# Data wrangling
 import pandas as pd
-import sqlite3
-import datetime as dt
-import plotly.express as px
 import numpy as np
 import dtale
-import dash as dash
-from dash import html
+import sqlite3
 import csv
-from dash.dependencies import Input, Output, State
 import os
 import shutil
-import matplotlib.pyplot as plt
-import seaborn as sns
 import time as time
 import datetime
+import datetime as dt
 from datetime import datetime
-import plotly.graph_objects as go
+
+# Visualization
+import matplotlib.pyplot as plt
+import plotly.express as px
+import seaborn as sns
+import dash as dash
+from dash import html
+from dash.dependencies import Input, Output, State
 from dash import dcc
 from flask import request
+
+# User string '/Users/name'
 from credentials import user
+
+
 
 #%% Connect to Database
 sql_connect = sqlite3.connect(f'{user}/Library/Group Containers/JLMPQHK86H.com.culturedcode.ThingsMac/Things Database.thingsdatabase/main.sqlite')
